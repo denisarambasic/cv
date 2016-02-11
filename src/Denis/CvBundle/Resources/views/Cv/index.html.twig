@@ -1,0 +1,39 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+<div class="container">
+	{% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+		<a href="{{ path('logout') }}">Logout</a>
+		<br />
+		<b>Wellcome: </b> {{ app.user.username }}
+	{% else %}
+		<a href="{{ path('login-form') }}">Login</a>
+	{% endif %}
+	
+    <h1>Cv list</h1>
+	{% for entity in entities %}
+		<div>
+			<b>{{ entity.cvName }}</b>
+			<a href="{{ path('cv_show', { 'id': entity.id }) }}" class="cv-bottun">show</a>
+			<a href="{{ path('cv_edit', { 'id': entity.id }) }}" class="cv-bottun">edit</a>
+
+
+			<form action="{{ path('cv_delete', { 'id': entity.id }) }}" method="post" class="form-inline">
+				<input type="hidden" name="_method" value="DELETE">
+					<div id="form">
+						<div>
+							<button type="submit" id="form_submit" name="form[submit]" class="submit-delete">Delete</button>
+						</div>
+						<input type="hidden" id="form__token" name="form[_token]" value="{{ csrfToken }}">
+					</div>
+			</form>
+
+		</div>
+	{% endfor %}	
+
+
+
+    <a href="{{ path('cv_new') }}" class="create-button">Create a new entry</a>
+
+	</div>
+    {% endblock %}

@@ -1,0 +1,9 @@
+user:
+    resource: "@UserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+cv:
+    resource: "@CvBundle/Resources/config/routing.yml"
+    prefix:   /
+

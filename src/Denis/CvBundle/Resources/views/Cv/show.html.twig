@@ -1,0 +1,84 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Cv</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Cvname</th>
+                <td>{{ entity.cvName }}</td>
+            </tr>
+            <tr>
+                <th>Nameandsurname</th>
+                <td>{{ entity.nameAndSurname }}</td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td>{{ entity.address }}</td>
+            </tr>
+            <tr>
+                <th>Phone</th>
+                <td>{{ entity.phone }}</td>
+            </tr>
+            <tr>
+                <th>Cellphone</th>
+                <td>{{ entity.cellPhone }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ entity.email }}</td>
+            </tr>
+            <tr>
+                <th>Dateofbirth</th>
+                <td>{{ entity.dateOfBirth }}</td>
+            </tr>
+            <tr>
+                <th>Birthplace</th>
+                <td>{{ entity.birthPlace }}</td>
+            </tr>
+            <tr>
+                <th>Workexpirience</th>
+                <td>{{ entity.workExpirience }}</td>
+            </tr>
+            <tr>
+                <th>Education</th>
+                <td>{{ entity.education }}</td>
+            </tr>
+            <tr>
+                <th>Foreignlanguages</th>
+                <td>{{ entity.foreignLanguages }}</td>
+            </tr>
+            <tr>
+                <th>Tehnicalcapabilities</th>
+                <td>{{ entity.tehnicalCapabilities }}</td>
+            </tr>
+            <tr>
+                <th>Drivinglicense</th>
+                <td>{{ entity.drivingLicense }}</td>
+            </tr>
+            <tr>
+                <th>Additionalinformation</th>
+                <td>{{ entity.additionalInformation }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('cv') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('cv_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

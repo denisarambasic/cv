@@ -1,0 +1,30 @@
+cv:
+    path:     /
+    defaults: { _controller: "CvBundle:Cv:index" }
+
+cv_show:
+    path:     /{id}/show
+    defaults: { _controller: "CvBundle:Cv:show" }
+
+cv_new:
+    path:     /new
+    defaults: { _controller: "CvBundle:Cv:new" }
+
+cv_create:
+    path:     /create
+    defaults: { _controller: "CvBundle:Cv:create" }
+    requirements: { _method: post }
+
+cv_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "CvBundle:Cv:edit" }
+
+cv_update:
+    path:     /{id}/update
+    defaults: { _controller: "CvBundle:Cv:update" }
+    requirements: { _method: post|put }
+
+cv_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "CvBundle:Cv:delete" }
+    requirements: { _method: post|delete }

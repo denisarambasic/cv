@@ -1,0 +1,115 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+
+<div class="container">
+    <h1>Cv edit</h1>
+	
+	{{ form_start(edit_form) }}
+		{{ form_errors(edit_form) }}
+		
+		{# cvName #}
+		{{ form_errors(edit_form.cvName) }}
+		<div class="label">{{ form_label(edit_form.cvName) }}</div>
+		<div class="field">{{ form_widget(edit_form.cvName) }}</div>
+		<div class="clr"></div>
+		{# end cvName #}
+		
+		{# nameAndSurname #}
+		{{ form_errors(edit_form.nameAndSurname) }}
+		<div class="label">{{ form_label(edit_form.nameAndSurname) }}</div>
+		<div class="field">{{ form_widget(edit_form.nameAndSurname) }}</div>
+		<div class="clr"></div>
+		{# end nameAndSurname #}
+		
+		{# address #}
+		{{ form_errors(edit_form.address) }}
+		<div class="label">{{ form_label(edit_form.address) }}</div>
+		<div class="field">{{ form_widget(edit_form.address) }}</div>
+		<div class="clr"></div>
+		{# end address #}
+		
+		{# phone #}
+		{{ form_errors(edit_form.phone) }}
+		<div class="label">{{ form_label(edit_form.phone) }}</div>
+		<div class="field">{{ form_widget(edit_form.phone) }}</div>
+		<div class="clr"></div>
+		{# end phone #}
+		
+		{# cellPhone #}
+		{{ form_errors(edit_form.cellPhone) }}
+		<div class="label">{{ form_label(edit_form.cellPhone) }}</div>
+		<div class="field">{{ form_widget(edit_form.cellPhone) }}</div>
+		<div class="clr"></div>
+		{# end cellPhone #}
+
+		{# email #}
+		{{ form_errors(edit_form.email) }}
+		<div class="label">{{ form_label(edit_form.email) }}</div>
+		<div class="field">{{ form_widget(edit_form.email) }}</div>
+		<div class="clr"></div>
+		{# end email #}
+
+		{# dateOfBirth #}
+		{{ form_errors(edit_form.dateOfBirth) }}
+		<div class="label">{{ form_label(edit_form.dateOfBirth) }}</div>
+		<div class="field">{{ form_widget(edit_form.dateOfBirth) }}</div>
+		<div class="clr"></div>
+		{# end dateOfBirth #}
+		
+		{# birthPlace #}
+		{{ form_errors(edit_form.birthPlace) }}
+		<div class="label">{{ form_label(edit_form.birthPlace) }}</div>
+		<div class="field">{{ form_widget(edit_form.birthPlace) }}</div>
+		<div class="clr"></div>
+		{# end birthPlace #}
+		
+		{# workExpirience #}
+		{{ form_errors(edit_form.workExpirience) }}
+		<div class="label">{{ form_label(edit_form.workExpirience) }}</div>
+		<div class="field">{{ form_widget(edit_form.workExpirience) }}</div>
+		<div class="clr"></div>
+		{# end workExpirience #}
+		
+		{# education #}
+		{{ form_errors(edit_form.education) }}
+		<div class="label">{{ form_label(edit_form.education) }}</div>
+		<div class="field">{{ form_widget(edit_form.education) }}</div>
+		<div class="clr"></div>
+		{# end education #}
+
+		{# foreignLanguages #}
+		{{ form_errors(edit_form.foreignLanguages) }}
+		<div class="label">{{ form_label(edit_form.foreignLanguages) }}</div>
+		<div class="field">{{ form_widget(edit_form.foreignLanguages) }}</div>
+		<div class="clr"></div>
+		{# end foreignLanguages #}
+		
+		{# tehnicalCapabilities #}
+		{{ form_errors(edit_form.tehnicalCapabilities) }}
+		<div class="label">{{ form_label(edit_form.tehnicalCapabilities) }}</div>
+		<div class="field">{{ form_widget(edit_form.tehnicalCapabilities) }}</div>
+		<div class="clr"></div>
+		{# end tehnicalCapabilities #}
+		
+		{# drivingLicense #}
+		{{ form_errors(edit_form.drivingLicense) }}
+		<div class="label">{{ form_label(edit_form.drivingLicense) }}</div>
+		<div class="field">{{ form_widget(edit_form.drivingLicense) }}</div>
+		<div class="clr"></div>
+		{# end drivingLicense #}
+
+		{# additionalInformation #}
+		{{ form_errors(edit_form.additionalInformation) }}
+		<div class="label">{{ form_label(edit_form.additionalInformation) }}</div>
+		<div class="field">{{ form_widget(edit_form.additionalInformation) }}</div>
+		<div class="clr"></div>
+		{# end additionalInformation #}
+		
+		{{ form_rest(edit_form) }}
+	{{ form_end(edit_form) }}
+	<a href="{{ path('cv') }}" class="create-button">Back to the list</a>
+
+
+</div>
+{% endblock %}

@@ -1,0 +1,104 @@
+.clr{
+	clear:both;
+}
+
+.label{
+	width: 190px;
+    float: left;
+    text-align: right;
+    padding-right: 5px;
+	
+}
+
+.field{
+	width:300px;
+	float:right;
+	text-align: left;
+    margin-bottom: 5px;
+}
+
+.container{	
+	width:500px;
+	padding: 50px;
+	border: 1px solid black;	
+	margin: 100px auto;
+	text-align: center;
+	border-radius:5px;
+}
+
+table{
+	margin: 0 auto;
+}
+
+
+a.bottun{
+	color:purple;
+	font-size:18px;
+	text-decoration:none;
+	display:block;
+	border: 1px solid black;
+	border-radius:5px;
+	margin:0 auto;
+	margin-bottom: 5px;
+	padding:5px;
+	width:	100px;
+}
+a.cv-bottun{
+	color: purple;
+    font-size: 14px;
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    padding: 2px;
+
+}
+a.create-button{
+    color: purple;
+    font-size: 18px;
+    text-decoration: none;
+    display: block;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 14px auto;
+    margin-bottom: 5px;
+    padding: 5px;
+    width: 150px;
+
+}
+.submit-delete{
+	color: purple;
+	background-color: #fff;
+    font-size: 13px;
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    padding: 2px;
+	cursor:pointer;
+
+}
+
+.submit{
+	color:purple;
+	font-size:18px;
+	padding:5px;
+	width:	100px;
+	border-radius:5px;
+	cursor:pointer;
+}
+.submit:hover{
+	border: 1px solid black;
+	margin-bottom: 2px;
+}
+
+.form-inline{
+	display:inline;
+}
+
+.form-inline #form,
+.form-inline #form div{
+	display:inline;
+}
